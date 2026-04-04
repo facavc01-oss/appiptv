@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FF6321;
+  --color-secondary: #0A0A0A;
+  --font-display: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-secondary text-white font-sans selection:bg-primary selection:text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-bold py-4 px-10 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-white/20 text-white font-bold py-4 px-10 rounded-xl transition-all hover:bg-white/10 hover:border-white/40 active:scale-95;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-black mb-4 tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-white/50 text-lg max-w-2xl mx-auto;
+  }
+}
+
