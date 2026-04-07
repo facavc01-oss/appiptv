@@ -75,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ session, onOpenAuth, onLogout }) => {
               {link.name}
             </a>
           ))}
-          
+
           <div className="flex items-center gap-4 ml-2 pl-6 border-l border-white/10">
             {session ? (
               <button onClick={onLogout} className="text-sm font-bold text-red-400 hover:text-red-300 transition-colors">
@@ -86,7 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({ session, onOpenAuth, onLogout }) => {
                 <Lock className="w-4 h-4" /> Entrar
               </button>
             )}
-            
+
             <a href="https://wa.me/5587999648723?text=Olá tenho interesse" target="_blank" rel="noreferrer" className="btn-primary !py-2.5 !px-6 text-sm shadow-[0_0_20px_rgba(255,99,33,0.4)]">
               Assine
             </a>
@@ -394,17 +394,17 @@ export default function App() {
 
   return (
     <div className="min-h-screen">
-      <Navbar 
-        session={session} 
-        onOpenAuth={() => setShowAuth(true)} 
-        onLogout={handleLogout} 
+      <Navbar
+        session={session}
+        onOpenAuth={() => setShowAuth(true)}
+        onLogout={handleLogout}
       />
 
       <AnimatePresence>
         {showAuth && (
-          <Auth 
-            onClose={() => setShowAuth(false)} 
-            onSuccess={() => setShowAuth(false)} 
+          <Auth
+            onClose={() => setShowAuth(false)}
+            onSuccess={() => setShowAuth(false)}
           />
         )}
       </AnimatePresence>
